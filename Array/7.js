@@ -14,6 +14,17 @@ console.log(revArray)
 
 // ----- Two pointer apporach ------- //
 
-let arr = [1, 2, 3, 4, 5]
+let arr = [1, 2, 3, 4, 5, 6]
 
- 
+let i = 0, j = arr.length - 1, temp
+
+while (i < j) {
+    temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+    i++
+    j--
+}
+console.log(arr)
+
+// This apporoach help us to reduce space complexcity by not creating any new array to stor ethe value..
